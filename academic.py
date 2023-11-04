@@ -83,13 +83,13 @@ with tab1:
 
   df = pd.DataFrame(data)
   st.write(df)
-
+ 
 
 with tab2:
 
   # Filter by: with certificate, no certificate, completed, in-progress
   # Filter by Platform: Coursera, Udemy, Kaggle, Other
-  st.markdown('View Online Courses')
+  st.markdown('View Online Courses [Last Updated November 2023]')
 
   courses_df = pd.DataFrame(
     [
@@ -120,7 +120,7 @@ with tab2:
     columns=["Course Name","Platform","Certificate","Status"]
 )
 
-  course_dynamic_filters = DynamicFilters(courses_df, filters=["Course Name","Platform","Certificate","Status"])
+  course_dynamic_filters = DynamicFilters(courses_df, filters=["Platform","Certificate","Status"])
 
   course_dynamic_filters.display_filters()
   course_dynamic_filters.display_df()
