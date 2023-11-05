@@ -8,10 +8,8 @@ import warnings
 warnings.filterwarnings('ignore')
 
 
-# Streamlit webpage properties
-st.set_page_config(page_title="Habiba El Keraby", page_icon="🧕🏽")
-# Customize layout
-st.set_page_config(layout="wide")
+# Streamlit webpage properties & layout
+st.set_page_config(page_title="Habiba El Keraby", page_icon="🧕🏽", layout="wide")
 
 rain(
     emoji="👋🏼",
