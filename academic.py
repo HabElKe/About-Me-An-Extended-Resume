@@ -89,7 +89,7 @@ with tab2:
 
   # Filter by: with certificate, no certificate, completed, in-progress
   # Filter by Platform: Coursera, Udemy, Kaggle, Other
-  st.markdown('View Online Courses [Last Updated November 2023]')
+  st.markdown('View Online Courses [Last Updated January 2024]')
 
   courses_df = pd.DataFrame(
     [
@@ -106,9 +106,10 @@ with tab2:
       ['Public Speaking','Udemy','No Certificate','In Progress'],
       ['Secret Sauce of Great Writing','Udemy','No Certificate','In Progress'],
       ['Chess course from beginner to master level','YouTube','No Certificate','In Progress'],
-      ['Python','Kaggle','With Certificate','In Progress'],
-      ['Intro to Machine Learning','Kaggle','With Certificate','In Progress'],
-      ['Pandas','Kaggle','With Certificate','In Progress'],
+      ['Python','Kaggle','With Certificate','Completed'],
+      ['Intro to Machine Learning','Kaggle','With Certificate','Completed'],
+      ['Pandas','Kaggle','With Certificate','Completed'],
+      ['Data Cleaning','Kaggle','With Certificate','Completed'],
       ['Intermediate Machine Learning','Kaggle','With Certificate','In Progress'],
       ['Data Visualization','Kaggle','With Certificate','In Progress'],
       ['Generative AI Fundamentals','Google Cloud Skills Boost','With Certificate','In Progress'],
