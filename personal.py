@@ -63,7 +63,7 @@ elif lang_sel == "English":
   ''')
 elif lang_sel == "French":
   st.markdown(''':red[Level:] Fluent  
-  French was the second language I ever learned, as a little child in kindergarten. My primary and elementary education were completed in French schools. Having lived in France for around a decade, begin a French national and speaking French with my siblings on a daily basis, I consider French to be one of my native languages.
+  French was the second language I ever learned, as a child in kindergarten. My primary and elementary education were completed in French schools. Having lived in France for around a decade, being a French national and speaking French with my siblings on a daily basis, I consider French to be one of my native languages.
 ''')
 elif lang_sel == "Italian":
   st.markdown(''':red[Level:] Intermediate  
@@ -205,3 +205,5 @@ else:
     color='col',
     zoom=6
     )
+
+

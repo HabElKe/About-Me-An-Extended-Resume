@@ -48,7 +48,9 @@ I take pride in being a versatile and autonomous learner, always eager to dive i
 
 In the world of **Data Science** 💻, I have honed my skills and independence as a **Junior Data Scientist**, where I maintain databases, craft insightful visualizations, and work with ML & NLP models. 
 
-My journey has enabled me to experience both the fast-paced nature of the tech world 👩🏽‍💻 as well as the more serene environment of the classroom 👩🏽‍🏫, where I had the privilege of teaching Arabic to students of all ages. With a strong foundation in engineering and a heart deeply invested in the arts, I embrace the interplay between logic and creativity. I invite you to join me on this exciting journey as I continue to grow 📈, learn 📚, and create ✨. 
+My journey has enabled me to experience both the fast-paced nature of the tech world 👩🏽‍💻 as well as the more serene environment of the classroom 👩🏽‍🏫, where I had the privilege of teaching Arabic to students of all ages for 3 years, as well as doing some private tutoring in English.
+
+With a strong foundation in engineering and a heart deeply invested in the world of languages and arts, I embrace the interplay between logic and creativity. I invite you to join me on this exciting journey as I continue to grow 📈, learn 📚, and create ✨. 
 
 Thank you for visiting 🙏🏽, and I hope you find inspiration in the intersection of my diverse passions and professional pursuits!
 ''')
