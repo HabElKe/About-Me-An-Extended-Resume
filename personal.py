@@ -13,16 +13,18 @@ colored_header(
     color_name="red-70",
 )
 st.link_button("View Creative Work", "https://instagram.com/selftaughtcreativity?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D")
-c1,c2,c3,c4,c5 = st.columns(5)
+c1,c2,c3,c4,c5, c6 = st.columns(6)
 with c1:
   st.markdown('##### Crochet 🧶')
 with c2:
-  st.markdown('##### Drawing 👩🏽‍🎨')
+  st.markdown('##### Embroidery 🧵')
 with c3:
-  st.markdown('##### Poetry 📜')
+  st.markdown('##### Drawing 👩🏽‍🎨')
 with c4:
-  st.markdown('##### Writing ✍🏼')
+  st.markdown('##### Poetry 📜')
 with c5:
+  st.markdown('##### Writing ✍🏼')
+with c6:
   st.markdown('##### Photography 📸')
 
 #----LANGUAGES SECTION----#

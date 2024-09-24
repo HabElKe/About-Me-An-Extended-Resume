@@ -22,7 +22,7 @@ with tab1:
   st.markdown('#### Bachelor\'s of Electrical & Computer Systems Engineering')
   st.markdown('##### Monash University (2017-2021)')
   # Filter by coursework category (Engineering, Computer Science, Natural Sciences)
-  st.markdown('View Completed Coursework')
+  st.markdown('Completed Coursework')
   data = {
       'Coursework Module': [
           'Engineering Industry Training',
@@ -91,7 +91,7 @@ with tab2:
 
   # Filter by: with certificate, no certificate, completed, in-progress
   # Filter by Platform: Coursera, Udemy, Kaggle, Other
-  st.markdown('View Online Courses [Last Updated April 2024]')
+  st.markdown('Online Courses [Last Updated Sep 2024]')
 
   courses_df = pd.DataFrame([
       [
@@ -118,6 +118,10 @@ with tab2:
           'Google Data Analytics Professional Certificate', 'Coursera',
           'With Certificate', 'Completed'
       ],
+      [
+            'Language Learning with AI - University of Michigan', 'Coursera',
+            'No Certificate', 'Completed'
+        ],
       [
           'Data Science, Machine Learning, Data Analysis, Python & R', 'Udemy',
           'No Certificate', 'In Progress'

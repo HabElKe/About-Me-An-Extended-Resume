@@ -20,9 +20,10 @@ with col2:
 
 st.markdown('''I'm a versatile and curious Electrical & Computer Systems Engineering graduate, driven by the pursuit of knowledge and a commitment to professional growth. During my studies at Monash University, I worked on Deep Learning COVID-19 detection methods in chest X-ray images.
 
-As a Junior Data Scientist at Appsaya Technologies, my work involves database management, data analysis & visualization, and utilizing ML & NLP tools for the creation of innovative business matching solutions. 
+As a Data Scientist at Appsaya Technologies, my work involves database management, data analysis & visualization, and utilizing ML & NLP tools for the creation of innovative business matching solutions. 
 
-Beyond my current professional activity, I've taught Arabic to students of various ages and levels and tutored English. My journey is defined by a quest for learning, and I invite you to explore the intersection of engineering and my creative hobbies with me.''')
+Beyond my current professional activity, I've taught Arabic to students of various ages and levels and tutored English & French. I invest my free time in creating digital tools to help language enthusiasts in their language learning journey at [The Digital Language Learner](https://thedigitallanguagelearner.com). 
+My journey is defined by a quest for learning, and I invite you to explore the intersection of engineering and my creative hobbies with me.''')
 
 #----TECHINCAL PROFILE SECTION----#
 colored_header(
