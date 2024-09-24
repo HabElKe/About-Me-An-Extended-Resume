@@ -18,12 +18,14 @@ st.markdown(
 tab1, tab2 = st.tabs(["Formal Education", "Online Courses"])
 
 with tab1:
-
-  st.markdown('#### Bachelor\'s of Electrical & Computer Systems Engineering')
-  st.markdown('##### Monash University (2017-2021)')
+    st.markdown('#### MSc Data Science & Machine Learning')
+    st.markdown('Sultan Qaboos University (Ongoing)')
+    st.markdown('#### BSc Electrical & Computer Systems Engineering')
+    st.markdown('Monash University (2017-2021)')
   # Filter by coursework category (Engineering, Computer Science, Natural Sciences)
-  st.markdown('Completed Coursework')
-  data = {
+    st.divider()
+    st.markdown('Completed Coursework')
+    data = {
       'Coursework Module': [
           'Engineering Industry Training',
           'Professional Practice',
@@ -84,8 +86,8 @@ with tab1:
       ],
   }
 
-  df = pd.DataFrame(data)
-  st.write(df)
+    df = pd.DataFrame(data)
+    st.write(df)
 
 with tab2:
 
