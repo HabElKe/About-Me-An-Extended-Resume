@@ -3,61 +3,412 @@ import pandas as pd
 import numpy as np
 from streamlit_extras.colored_header import colored_header
 
-#----INTRO SECTION----#
+import streamlit as st
+from streamlit_extras.colored_header import colored_header
+
+
+# ============================================================
+# LINKS
+# Replace the placeholder URLs below with your actual links.
+# ============================================================
+
+TECHNICAL_TEACHING_PORTFOLIO = "https://digitallanguagelearner.my.canva.site/technical-teaching-portfolio"
+LANGUAGE_TEACHING_PORTFOLIO = "https://digitallanguagelearner.my.canva.site/language-teaching-portfolio"
+PYGAME_COURSE = "https://github.com/HabElKe/Pygame-Python-Beginners-Course"
+LANGUAGE_MATERIALS = "https://payhip.com/SelfLearnerToolkit"
+
+DATA_SCIENCE_PORTFOLIO = "https://www.datascienceportfol.io/Habiba_ElKeraby"
+LINKEDIN = "https://www.linkedin.com/in/habiba-e-7839b3194/"
+
+
+# ============================================================
+# PAGE HEADER
+# ============================================================
+
 colored_header(
     label="My Professional Journey",
-    description="",
-    color_name="red-70",
+    description="Education, AI & Data Science, research, and the work that connects them",
+    color_name="red-70"
 )
-# Functionalities to be implemented
-st.subheader("About Me")
 
-col1, col2 = st.columns(2)
-with col1:
-  st.link_button("View Portfolio", "https://www.datascienceportfol.io/Habiba_ElKeraby")
-with col2:
-  st.link_button("View LinkedIn Profile", "https://www.linkedin.com/in/habiba-el-keraby-7839b3194/")
 
-st.markdown('''I'm a versatile and curious Electrical & Computer Systems Engineering graduate, driven by the pursuit of knowledge and a commitment to professional growth. During my studies at Monash University, I worked on Deep Learning COVID-19 detection methods in chest X-ray images.
+# ============================================================
+# ABOUT ME
+# ============================================================
 
-As a Data Scientist at Appsaya Technologies, my work involves database management, data analysis & visualization, and utilizing ML & NLP tools for the creation of innovative business matching solutions. 
+st.markdown("### About Me")
 
-Beyond my current professional activity, I've taught Arabic to students of various ages and levels and tutored English & French. I invest my free time in creating digital tools to help language enthusiasts in their language learning journey at [The Digital Language Learner](https://thedigitallanguagelearner.com). 
-My journey is defined by a quest for learning, and I invite you to explore the intersection of engineering and my creative hobbies with me.''')
+st.markdown(
+    """
+I am an **AI and Data Science educator and applied machine learning researcher**
+with a background in electrical and computer systems engineering, data science,
+and interdisciplinary research.
 
-#----TECHINCAL PROFILE SECTION----#
-colored_header(
-    label="Technical Profile",
-  description="",
-    color_name="red-70",
+My professional work combines **AI and data science with education**. I have
+taught Python programming, machine learning, deep learning, web programming,
+and languages to learners with different backgrounds and levels of experience.
+
+My research interests include machine learning, representation learning,
+natural language processing, large language models, and the application of
+computational methods to biomedical data.
+
+Across both teaching and research, I enjoy making complex ideas understandable,
+structuring learning around practical problems, and developing resources that
+help learners become more confident and independent.
+"""
 )
+
+
+# ============================================================
+# AREAS OF WORK
+# ============================================================
+
+st.markdown("### Areas of Work")
+
 col1, col2 = st.columns(2)
+
 with col1:
-  st.markdown("**Programming Languages**")
+    st.markdown("#### AI & Machine Learning")
+    st.write(
+        "Applied machine learning, deep learning, NLP, LLMs, "
+        "and representation learning."
+    )
+
+    st.markdown("#### Data Science")
+    st.write(
+        "Data analysis, visualization, statistical exploration, "
+        "and computational approaches to interdisciplinary datasets."
+    )
+
 with col2:
-  st.markdown("Python, SQL, C, MATLAB, R")
+    st.markdown("#### Education")
+    st.write(
+        "Programming, AI, data science, and multilingual language "
+        "education through structured and practical instruction."
+    )
+
+    st.markdown("#### Research")
+    st.write(
+        "Interdisciplinary machine learning research, particularly "
+        "at the intersection of AI and biomedical data."
+    )
+
+
 st.divider()
-col1, col2 = st.columns(2)
-with col1:
-  st.markdown("**Academic Interests**")
-with col2:
-  st.markdown("Natural Language Processing, Machine Learning, Data Visualization")
+
+
+# ============================================================
+# TEACHING
+# ============================================================
+
+st.markdown("### Teaching")
+
+st.write(
+    "Teaching is a central part of my professional work. My experience spans "
+    "technical subjects and language education, from individual instruction "
+    "to structured multi-session courses."
+)
+
+
+# ----------------------------
+# Technical Teaching
+# ----------------------------
+
+st.markdown("#### Technical Teaching")
+st.markdown(
+    "**AI · Data Science · Programming**"
+)
+
+st.write(
+    "I teach programming and computational subjects through structured "
+    "progression, practical application, and learner-centred instruction."
+)
+
+if TECHNICAL_TEACHING_PORTFOLIO.startswith("http"):
+    st.link_button(
+        "View Technical Teaching Portfolio",
+        TECHNICAL_TEACHING_PORTFOLIO
+    )
+
+
+st.markdown("##### Pygame Project-Based Course")
+
+st.write(
+    "A complete project-based Python/Pygame course, with lessons provided "
+    "as commented Python files designed for use in the Trinket Pygame environment."
+)
+
+if PYGAME_COURSE.startswith("http"):
+    st.link_button(
+        "Explore the Pygame Course on GitHub",
+        PYGAME_COURSE
+    )
+
+
+st.markdown("---")
+
+
+# ----------------------------
+# Language Teaching
+# ----------------------------
+
+st.markdown("#### Language Teaching")
+st.markdown(
+    "**English · Arabic · French**"
+)
+
+st.write(
+    "My language-teaching experience includes classroom teaching, individual "
+    "tutoring, exam preparation, and the design of personalized learning "
+    "programmes and materials."
+)
+
+if LANGUAGE_TEACHING_PORTFOLIO.startswith("http"):
+    st.link_button(
+        "View Language Teaching Portfolio",
+        LANGUAGE_TEACHING_PORTFOLIO
+    )
+
+
+st.markdown("##### Language Learning Materials")
+
+st.write(
+    "Selected language-learning resources and materials available through "
+    "my Payhip store."
+)
+
+if LANGUAGE_MATERIALS.startswith("http"):
+    st.link_button(
+        "Visit My Language-Learning Materials",
+        LANGUAGE_MATERIALS
+    )
+
+
 st.divider()
-col1, col2 = st.columns(2)
-with col1:
-  st.markdown("**Data Visualization**")
-with col2:
-  st.markdown("Tableau Public, PowerBI, matplotlib, seaborn")
+
+
+# ============================================================
+# RESEARCH & PUBLICATIONS
+# ============================================================
+
+st.markdown("### Research & Publications")
+
+st.write(
+    "My research focuses on applying machine learning and computational "
+    "methods to complex datasets, with particular experience in biomedical "
+    "data and natural language processing."
+)
+
+
+# ----------------------------
+# Research areas
+# ----------------------------
+
+research_col1, research_col2, research_col3 = st.columns(3)
+
+with research_col1:
+    st.markdown("#### Biomedical Machine Learning")
+    st.write(
+        "Representation learning, transcriptomic data, multi-omics data, "
+        "and computational approaches to cancer research."
+    )
+
+with research_col2:
+    st.markdown("#### NLP & Large Language Models")
+    st.write(
+        "Information extraction from medical text using open-source LLMs "
+        "and multi-agent approaches."
+    )
+
+with research_col3:
+    st.markdown("#### Research Communication")
+    st.write(
+        "Scientific writing, conference presentations, interdisciplinary "
+        "collaboration, and technical communication."
+    )
+
+
+st.markdown("#### Selected Publications & Presentations")
+
+
+publications = [
+    (
+        "Transcriptomic Predictors of Therapy Response Across Age Groups "
+        "in an Omani Breast Cancer Cohort",
+        "AACR 2025 abstract accepted. Co-first author; responsible for the "
+        "data analysis and machine learning work."
+    ),
+    (
+        "A Multi-Agent Open-Source LLM for Cancer Registry Information "
+        "Extraction from Pathology & Medical Reports",
+        "BioNLP 2026, accepted. Co-author and technical contributor."
+    ),
+    (
+        "Comparative Evaluation of Dimensionality Reduction Strategies "
+        "for Clustering-Based Patient Stratification in Breast Cancer "
+        "Transcriptomics",
+        "IWBBIO 2026, accepted and presented. Co-author and conference presenter."
+    ),
+    (
+        "Automated Extraction of Multi-Field and Multi-Site Cancer Registry "
+        "Information Using Open-Source Large Language Models",
+        "Manuscript under revision for submission to JMIR Medical Informatics. "
+        "Second author and technical contributor."
+    ),
+    (
+        "Disentangling Architectural and Graph Effects in Multi-Omics "
+        "Autoencoders: A Controlled Ablation and Null-Graph Study in "
+        "Breast Cancer",
+        "MSc thesis-based manuscript submitted to Springer Nature's NetMAHIB."
+    ),
+]
+
+for title, description in publications:
+    st.markdown(f"**{title}**")
+    st.write(description)
+
+
 st.divider()
-col1, col2 = st.columns(2)
-with col1:
-  st.markdown("**Database & Version Control**")
-with col2:
-  st.markdown("MySQL, Github")
+
+
+# ============================================================
+# PROFESSIONAL EXPERIENCE
+# ============================================================
+
+st.markdown("### Professional Experience")
+
+
+st.markdown("#### Teaching & Education")
+
+st.markdown(
+    """
+**Teaching Assistant — Sultan Qaboos University**  
+*Feb 2025–May 2026*
+
+Supported undergraduate teaching across Deep Learning Fundamentals,
+Machine Learning, and Introduction to Python Programming, with approximately
+30–35 students per course.
+"""
+)
+
+st.markdown(
+    """
+**Programming Instructor — Eveil@ng, Online Academy**  
+*Jan 2024–Jun 2025; Jan 2025–Jun 2026*
+
+Delivered approximately six-month courses in Web Programming and Python
+Programming and prepared practical programming material for learners with
+different levels of prior experience.
+"""
+)
+
+st.markdown(
+    """
+**Arabic Teacher — Local Cultural Center, Sartrouville, France**  
+*2021–2024*
+
+Taught Arabic to school-age and adult learners across multiple academic years,
+adapting explanations and activities to different learner levels.
+"""
+)
+
+st.markdown(
+    """
+**Language Teacher — Academia Europa, Online Academy**  
+*Dec 2021–Mar 2022*
+
+Taught English and French online to learners with varied levels and learning goals.
+"""
+)
+
+st.markdown(
+    """
+**Python Tutor — Superprofs.com**  
+*Summer 2025*
+
+Provided one-to-one Python programming tutoring tailored to individual
+learning needs.
+"""
+)
+
+
+st.markdown("#### Research & Data Science")
+
+st.markdown(
+    """
+**Research Assistant – Medical AI & NLP — Sultan Qaboos University**  
+*Feb–Dec 2025*
+
+Developed automated cancer-registry information extraction workflows from
+pathology and medical reports using open-source LLMs, including LLaMA-,
+Qwen-, and DeepSeek-based models. Designed multi-agent workflows and worked
+with hospital databases covering more than 600 patients.
+"""
+)
+
+st.markdown(
+    """
+**MSc Researcher – Biomedical Machine Learning — Sultan Qaboos University**  
+*2024–2026*
+
+Developed controlled deep learning experiments to study structural inductive
+bias in unsupervised representations of high-dimensional breast cancer
+multi-omics data, evaluating autoencoder, denoising, graph-regularized,
+and graph-structured approaches.
+"""
+)
+
+
 st.divider()
-col1, col2 = st.columns(2)
-with col1:
-  st.markdown("**Tools & Libraries**")
-with col2:
-  st.markdown("Numpy, Pandas, Scikit-Learn, Tensorflow, Keras, PyTorch, Streamlit, Google Colaboratory, Replit, Rstudio")
+
+
+# ============================================================
+# TEACHING AREAS
+# ============================================================
+
+st.markdown("### Teaching Areas")
+
+teaching_col1, teaching_col2 = st.columns(2)
+
+with teaching_col1:
+    st.markdown("**Programming**")
+    st.write("Python · Web Programming")
+
+    st.markdown("**AI & Data**")
+    st.write(
+        "Machine Learning · Deep Learning · Data Science · Data Visualization"
+    )
+
+with teaching_col2:
+    st.markdown("**Languages**")
+    st.write("Arabic · English · French")
+
+    st.markdown("**Research & Academic**")
+    st.write(
+        "Academic writing · Literature review · Experimental design · "
+        "Applied statistical analysis · Scientific presentations · LaTeX/Overleaf"
+    )
+
+
 st.divider()
+
+
+# ============================================================
+# PROFESSIONAL LINKS
+# ============================================================
+
+st.markdown("### Professional Links")
+
+link_col1, link_col2 = st.columns(2)
+
+with link_col1:
+    st.link_button(
+        "Data Science Portfolio",
+        DATA_SCIENCE_PORTFOLIO
+    )
+
+with link_col2:
+    st.link_button(
+        "LinkedIn",
+        LINKEDIN
+    )
