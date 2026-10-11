@@ -36,24 +36,22 @@ streamlit_marquee(**{
 })
 
 colored_header(
-    label="About Me: Learner, Educator, Polyglot",
-    description="A snapshot of me, a curious and eternal learner",
+    label="A Learner, Educator & Researcher",
+    description="A snapshot of my work, interests and lifelong learning journey",
     color_name="red-70",
 )
 
 st.markdown('''
-Welcome to my digital corner of the world! 👋🏼 I'm **Habiba** 🧕🏼, an *Electrical & Computer Systems Engineering* graduate with a passion for exploring the intricate workings of both technology 👩🏽‍💻 and the creative arts 🎨. 
+Welcome to my digital corner of the world.
 
-I take pride in being a versatile and autonomous learner, always eager to dive into new challenges. This curiosity has led me to explore a diverse range of interests, including language learning, crochet 🧶, embroidery 🧵, drawing 👩🏽‍🎨, poetry 📜, writing ✍🏼, photography 📸, and more!
+I'm Habiba, an educator and researcher working at the intersection of AI, data science, programming and language education.
 
-In the world of **Data Science** 💻, I have honed my skills and independence as a **Junior Data Scientist**, where I maintain databases, craft insightful visualizations, and work with ML & NLP models. 
+My background spans engineering, machine learning research, technical teaching and multilingual education. I enjoy turning complex subjects into structured learning experiences and creating resources that help people understand, practise and eventually learn independently.
 
-My journey has enabled me to experience both the fast-paced nature of the tech world 👩🏽‍💻 as well as the more serene environment of the classroom 👩🏽‍🏫, where I had the privilege of teaching Arabic to students of all ages for 3 years, as well as doing some private tutoring in English and French.
-
-With a strong foundation in engineering and a heart deeply invested in the world of languages and arts, I embrace the interplay between logic and creativity. I invite you to join me on this exciting journey as I continue to grow 📈, learn 📚, and create ✨. 
-
-Thank you for visiting 🙏🏽, and I hope you find inspiration in the intersection of my diverse passions and professional pursuits!
+Alongside my professional work, I'm a language learner and creative enthusiast. This website brings together the different parts of that journey.
 ''')
+
+#st.divider()
 
 show_pages(
     [
