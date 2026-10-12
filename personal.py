@@ -9,10 +9,10 @@ st.set_page_config(layout="wide")
 #----PERSONAL INTERESTS SECTION----#
 colored_header(
     label="My Personal Interests",
-    description="",
-    color_name="red-70",
+    description="The things I enjoy learning, making, and exploring beyond my professional work",
+    color_name="red-70"
 )
-st.link_button("View Creative Work", "https://instagram.com/selftaughtcreativity?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D")
+
 c1,c2,c3,c4,c5, c6 = st.columns(6)
 with c1:
   st.markdown('##### Crochet 🧶')
@@ -30,63 +30,41 @@ with c6:
 #----LANGUAGES SECTION----#
 colored_header(
     label="Language Learning",
-    description="The stories behind my language studies",
-    color_name="red-70",
+    description="The languages I speak, study, and continue to discover",
+    color_name="red-70"
 )
 
-st.markdown('''Language learning is, for me, a passion and a lifelong journey. I see language learning as a tool for personal growth and an opportunity to broaden my horizons and deepen my understanding of the world and the people in it.
-''')
-st.markdown('#### Spoken Languages:')
-c1,c2,c3,c4= st.columns(4)
-with c1:
-  st.markdown('##### Arabic')
-  st.markdown('##### Persian')
-with c2:
-  st.markdown('##### English')
-  st.markdown('##### Portuguese')
-with c3:
-  st.markdown('##### French')
-  st.markdown('##### Italian')
-with c4:
-  st.markdown('##### Spanish')
-  st.markdown('##### Turkish')
-lang_sel = st.selectbox(
-  "Select a language to learn more about my journey with it:",
-  ("Arabic", "English", "French","Italian","Persian","Portuguese","Spanish","Turkish"),
-  index=None, placeholder="Languages Spoken"
+st.write(
+    """
+Language learning has been a constant part of my life. Some languages grew
+from family and education, while others came through travel, culture,
+friendships, and independent study. I continue to learn languages both as a
+way of connecting with people and as a way of understanding the places and
+cultures around me.
+"""
 )
-if lang_sel == "Arabic":
-  st.markdown(''':red[Level:] Native, Fluent  
-  I was born in Cairo, Egypt and grew up in a household where we communicated mostly in Arabic. Arabic is my mother tongue, and the first language I ever spoke. Aside from speaking and understanding many Arabic dialects, I am interested in Modern Standard Arabic, and enjoy reading and educating myself about Arabic literature.
-  ''')
-elif lang_sel == "English":
-  st.markdown(''':red[Level:] Fluent  
-  Like most non-native English speakers, I first learned English in school. My academic and professional careers have made English a language I use on a daily basis. I now consider it one of my native languages because of how comfortably I can express my thoughts and ideas and how long I have been speaking it.
-  ''')
-elif lang_sel == "French":
-  st.markdown(''':red[Level:] Fluent  
-  French was the second language I ever learned, as a child in kindergarten. My primary and elementary education were completed in French schools. Having lived in France for around a decade, being a French national and speaking French with my siblings on a daily basis, I consider French to be one of my native languages.
-''')
-elif lang_sel == "Italian":
-  st.markdown(''':red[Level:] Intermediate  
-  I became interested in learning Italian when I realized how similar it was to both French and Spanish, two languages I was already comfortable speaking. I found it easy to understand, which pushed me to put in effort to study the language in a more stuctured way. I studied it autonomously using online resources, and had the chance to interact with the language directly through a trip to Italy in the summer of 2019.
-''')
-elif lang_sel == "Persian":
-  st.markdown(''':red[Level:] Proficient  
-  After studying many European languages, I wanted to study a language that would bring me closer to my mother tongue. I was increasingly interested in Arabic literature and the ancient Islamic world, and Persian was an inevitable part of that. I was also very excited about the Persian language's seemingly easy grammar and the huge amount of vocabulary similarity it shared with Arabic. This is why I chose to study Persian as my seventh language. I found a deep personal connection with the language and the culture, and learned a lot about its different variants and the countries where it's spoken. In my opinion, any language that bears such historical importance is bound to be increadibly impactful to anyone who chooses to learn it.
-''')
-elif lang_sel == "Portuguese":
-  st.markdown(''':red[Level:] Advanced  
-  I began studying Portuguese in the summer of 2014. I was interested in the similarities between Spanish and Portuguese, so I decided to dive into the language by studying it independently. I was my first experience with self-teaching, and it opened my eyes to the endless possibilities of well structured, autodidactic learning. As I already had a solid foundation in Spanish, I was able to comfortably navigate the vast amount of online content to select the best resources to progress.
-''')
-elif lang_sel == "Spanish":
-  st.markdown(''':red[Level:] Proficient  
-  I grew up with with Arabic as my mother tongue, and with French and English as staple languages in my academic career. I started learning Spanish as a foreign language at school, but I was so encouraged by seeing my progress that I made conscious efforts to maintain it. I remember one of the most impactful Spanish teachers I had. She was from Costa Rica, and it was in her class that I truly noticed a leap in my Spanish abilities. Her class was an environment where I was completely immersed in the language, and I found myself forming friendships with my Latin American neighbors and hearing stories of their life and culture. It was through Spanish that I first experienced the magic of connecting to others through their language.
-''')
-elif lang_sel == "Turkish":
-  st.markdown(''':red[Level:] Beginner  
-  Turkish is my most recent language project. It's a language I consider myself familiar with due to knowing Arabic and Persian, and growing up with Turkish friends during childhood. Turkish culture makes me feel at home, and the Turkish language is the perfect addition to my language learning journey, expecially because it feels like a natural progression after learning Persian.
-''')
+
+languages = [
+    ("Arabic", "Native"),
+    ("French", "C2 / Native-like"),
+    ("English", "C2 / Native-like"),
+    ("Spanish", "C2 / Proficient"),
+    ("Persian", "C1 / Advanced"),
+    ("Portuguese", "B2–C1 / Upper Intermediate–Advanced"),
+    ("Mandarin Chinese", "A2–B1 / Lower Intermediate"),
+    ("Turkish", "A1-A2 / Elementary"),
+    ("Italian", "A1-A2 / Elementary"),
+]
+
+language_cols = st.columns(2)
+
+for i, (language, level) in enumerate(languages):
+    with language_cols[i % 2]:
+        st.markdown(f"**{language}**")
+        st.caption(level)
+
+
+st.divider()
 
 #----MAP SECTION----#
 colored_header(
@@ -109,6 +87,8 @@ df_live = pd.DataFrame(
       [25.204849, 55.270782, 200, "#1a87bc"],# Dubai
       [51.507351, -0.127758, 200, "#1a87bc"],# London
       [3.1516964, 101.6942371, 200, "#1a87bc"],# KL
+      [23.5880, 58.3829, 200, "#1a87bc"],# Muscat
+      [30.5728, 104.0668, 200, "#1a87bc"],# Chengdu
     ],
     columns=["lat","long","size","col"]
 )
@@ -136,13 +116,19 @@ df_visit = pd.DataFrame([
   [39.2387054, 28.1749129, 50, "#3265ff"],# Sindirgi
   [24.4538352, 54.3774014, 50, "#3265ff"],# Abu Dhabi
   [24.2248697, 55.7452211, 50, "#3265ff"],# Al Ain
-  [23.61515, 58.5912467, 50, "#3265ff"],# Muscat
   [26.2235041, 50.5822436, 50, "#3265ff"],# Manama
   [24.4686175, 39.6110134, 50, "#3265ff"],# Al-Madinah
   [21.420847, 39.826869, 50, "#3265ff"],# Makkah
   [6.3700386, 99.7928634, 50, "#3265ff"],# Langkawi
   [1.357107, 103.8194992, 50, "#3265ff"],# Singapore
   [29.7589382, -95.3676974, 50, "#3265ff"],# Houston
+
+  # New places visited
+  [22.9333, 57.5333, 50, "#3265ff"],# Nizwa
+  [39.9042, 116.4074, 50, "#3265ff"],# Beijing
+  [29.5918, 52.5837, 50, "#3265ff"],# Shiraz
+  [35.6892, 51.3890, 50, "#3265ff"],# Tehran
+  [36.2605, 59.6168, 50, "#3265ff"],# Mashhad
 ],
   columns=["lat","long","size","col"]
 )
@@ -155,7 +141,6 @@ df_tovisit = pd.DataFrame(
       [33.8750629, 35.843409, 50, "#d132ff"],# Lebanon
       [31.1667049, 36.941628, 50, "#d132ff"],# Jordan
       [32.0254688, 35.2888075, 50, "#d132ff"],# Palestine
-      [32.6475314, 54.5643516, 50, "#d132ff"],# Iran
       [33.7680065, 66.2385139, 50, "#d132ff"],# Afghanistan
 
     ],
@@ -207,5 +192,4 @@ else:
     color='col',
     zoom=6
     )
-
 
