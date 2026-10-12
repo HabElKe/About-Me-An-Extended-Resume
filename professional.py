@@ -12,6 +12,7 @@ TECHNICAL_TEACHING_PORTFOLIO = "https://digitallanguagelearner.my.canva.site/tec
 LANGUAGE_TEACHING_PORTFOLIO = "https://digitallanguagelearner.my.canva.site/language-teaching-portfolio"
 PYGAME_COURSE = "https://github.com/HabElKe/Pygame-Python-Beginners-Course"
 LANGUAGE_MATERIALS = "https://payhip.com/SelfLearnerToolkit"
+KOTOBEE_SAMPLE = "https://books.kotobee.com/library/#/book/172678"
 
 DATA_SCIENCE_PORTFOLIO = "https://www.datascienceportfol.io/Habiba_ElKeraby"
 LINKEDIN = "https://www.linkedin.com/in/habiba-e-7839b3194/"
@@ -180,6 +181,14 @@ with teaching_tab:
     st.link_button(
         "Visit My Language-Learning Materials",
         LANGUAGE_MATERIALS
+    )
+    
+    st.write(
+        "Explore one of my bilingual self-learning short stories/activity books!"
+    )
+    st.link_button(
+        "Visit Interactive Ebook",
+        KOTOBEE_SAMPLE
     )
 
     st.divider()
