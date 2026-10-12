@@ -3,10 +3,6 @@ import pandas as pd
 import numpy as np
 from streamlit_extras.colored_header import colored_header
 
-import streamlit as st
-from streamlit_extras.colored_header import colored_header
-
-
 # ============================================================
 # LINKS
 # Replace the placeholder URLs below with your actual links.
@@ -21,9 +17,9 @@ DATA_SCIENCE_PORTFOLIO = "https://www.datascienceportfol.io/Habiba_ElKeraby"
 LINKEDIN = "https://www.linkedin.com/in/habiba-e-7839b3194/"
 
 
-# ============================================================
-# PAGE HEADER
-# ============================================================
+# ---------------------------------------------------------
+# Header
+# ---------------------------------------------------------
 
 colored_header(
     label="My Professional Journey",
@@ -32,9 +28,9 @@ colored_header(
 )
 
 
-# ============================================================
-# ABOUT ME
-# ============================================================
+# ---------------------------------------------------------
+# About Me
+# ---------------------------------------------------------
 
 st.markdown("### About Me")
 
@@ -59,15 +55,15 @@ help learners become more confident and independent.
 )
 
 
-# ============================================================
-# AREAS OF WORK
-# ============================================================
+# ---------------------------------------------------------
+# Areas of Work
+# ---------------------------------------------------------
 
 st.markdown("### Areas of Work")
 
-col1, col2 = st.columns(2)
+area_col1, area_col2 = st.columns(2)
 
-with col1:
+with area_col1:
     st.markdown("#### AI & Machine Learning")
     st.write(
         "Applied machine learning, deep learning, NLP, LLMs, "
@@ -80,7 +76,7 @@ with col1:
         "and computational approaches to interdisciplinary datasets."
     )
 
-with col2:
+with area_col2:
     st.markdown("#### Education")
     st.write(
         "Programming, AI, data science, and multilingual language "
@@ -97,258 +93,275 @@ with col2:
 st.divider()
 
 
-# ============================================================
-# TEACHING
-# ============================================================
+# =========================================================
+# MAIN PROFESSIONAL TABS
+# =========================================================
 
-st.markdown("### Teaching")
-
-st.write(
-    "Teaching is a central part of my professional work. My experience spans "
-    "technical subjects and language education, from individual instruction "
-    "to structured multi-session courses."
+teaching_tab, research_tab = st.tabs(
+    [
+        "Teaching",
+        "Research & Professional Experience",
+    ]
 )
 
 
-# ----------------------------
-# Technical Teaching
-# ----------------------------
+# =========================================================
+# TEACHING TAB
+# =========================================================
 
-st.markdown("#### Technical Teaching")
-st.markdown(
-    "**AI · Data Science · Programming**"
-)
+with teaching_tab:
 
-st.write(
-    "I teach programming and computational subjects through structured "
-    "progression, practical application, and learner-centred instruction."
-)
+    st.markdown("### Teaching")
 
-if TECHNICAL_TEACHING_PORTFOLIO.startswith("http"):
+    st.write(
+        "Teaching is a central part of my professional work. My experience "
+        "spans technical subjects and language education, from individual "
+        "instruction to structured multi-session courses."
+    )
+
+    # -----------------------------------------------------
+    # Technical Teaching
+    # -----------------------------------------------------
+
+    st.markdown("#### Technical Teaching")
+
+    st.markdown("**AI · Data Science · Programming**")
+
+    st.write(
+        "I teach programming and computational subjects through structured "
+        "progression, practical application, and learner-centred instruction."
+    )
+
     st.link_button(
         "View Technical Teaching Portfolio",
         TECHNICAL_TEACHING_PORTFOLIO
     )
 
+    st.markdown("##### Pygame Project-Based Course")
 
-st.markdown("##### Pygame Project-Based Course")
+    st.write(
+        "A complete project-based Python/Pygame course, with lessons provided "
+        "as commented Python files designed for use in the Trinket Pygame environment."
+    )
 
-st.write(
-    "A complete project-based Python/Pygame course, with lessons provided "
-    "as commented Python files designed for use in the Trinket Pygame environment."
-)
-
-if PYGAME_COURSE.startswith("http"):
     st.link_button(
         "Explore the Pygame Course on GitHub",
         PYGAME_COURSE
     )
 
+    st.divider()
 
-st.markdown("---")
+    # -----------------------------------------------------
+    # Language Teaching
+    # -----------------------------------------------------
 
+    st.markdown("#### Language Teaching")
 
-# ----------------------------
-# Language Teaching
-# ----------------------------
+    st.markdown("**English · Arabic · French**")
 
-st.markdown("#### Language Teaching")
-st.markdown(
-    "**English · Arabic · French**"
-)
+    st.write(
+        "My language-teaching experience includes classroom teaching, "
+        "individual tutoring, exam preparation, and the design of "
+        "personalized learning programmes and materials."
+    )
 
-st.write(
-    "My language-teaching experience includes classroom teaching, individual "
-    "tutoring, exam preparation, and the design of personalized learning "
-    "programmes and materials."
-)
-
-if LANGUAGE_TEACHING_PORTFOLIO.startswith("http"):
     st.link_button(
         "View Language Teaching Portfolio",
         LANGUAGE_TEACHING_PORTFOLIO
     )
 
+    st.markdown("##### Language Learning Materials")
 
-st.markdown("##### Language Learning Materials")
+    st.write(
+        "Selected language-learning resources and materials available "
+        "through my Payhip store."
+    )
 
-st.write(
-    "Selected language-learning resources and materials available through "
-    "my Payhip store."
-)
-
-if LANGUAGE_MATERIALS.startswith("http"):
     st.link_button(
         "Visit My Language-Learning Materials",
         LANGUAGE_MATERIALS
     )
 
+    st.divider()
 
-st.divider()
+    # -----------------------------------------------------
+    # Teaching Areas
+    # -----------------------------------------------------
+
+    st.markdown("#### Teaching Areas")
+
+    teaching_col1, teaching_col2 = st.columns(2)
+
+    with teaching_col1:
+        st.markdown("**Programming**")
+        st.write("Python · Web Programming")
+
+        st.markdown("**AI & Data**")
+        st.write(
+            "Machine Learning · Deep Learning · Data Science · Data Visualization"
+        )
+
+    with teaching_col2:
+        st.markdown("**Languages**")
+        st.write("Arabic · English · French")
+
+        st.markdown("**Research & Academic**")
+        st.write(
+            "Academic writing · Literature review · Experimental design · "
+            "Applied statistical analysis · Scientific presentations · "
+            "LaTeX / Overleaf"
+        )
 
 
-# ============================================================
-# RESEARCH & PUBLICATIONS
-# ============================================================
+# =========================================================
+# RESEARCH + PROFESSIONAL EXPERIENCE TAB
+# =========================================================
 
-st.markdown("### Research & Publications")
+with research_tab:
 
-st.write(
-    "My research focuses on applying machine learning and computational "
-    "methods to complex datasets, with particular experience in biomedical "
-    "data and natural language processing."
-)
+    # -----------------------------------------------------
+    # Research & Publications
+    # -----------------------------------------------------
 
+    st.markdown("### Research & Publications")
 
-# ----------------------------
-# Research areas
-# ----------------------------
-
-research_col1, research_col2, research_col3 = st.columns(3)
-
-with research_col1:
-    st.markdown("#### Biomedical Machine Learning")
     st.write(
-        "Representation learning, transcriptomic data, multi-omics data, "
-        "and computational approaches to cancer research."
+        "My research focuses on applying machine learning and computational "
+        "methods to complex datasets, with particular experience in biomedical "
+        "data and natural language processing."
     )
 
-with research_col2:
-    st.markdown("#### NLP & Large Language Models")
-    st.write(
-        "Information extraction from medical text using open-source LLMs "
-        "and multi-agent approaches."
-    )
+    research_col1, research_col2, research_col3 = st.columns(3)
 
-with research_col3:
-    st.markdown("#### Research Communication")
-    st.write(
-        "Scientific writing, conference presentations, interdisciplinary "
-        "collaboration, and technical communication."
-    )
+    with research_col1:
+        st.markdown("#### Biomedical Machine Learning")
+        st.write(
+            "Representation learning, transcriptomic data, multi-omics data, "
+            "and computational approaches to cancer research."
+        )
 
+    with research_col2:
+        st.markdown("#### NLP & Large Language Models")
+        st.write(
+            "Information extraction from medical text using open-source LLMs "
+            "and multi-agent approaches."
+        )
 
-st.markdown("#### Selected Publications & Presentations")
+    with research_col3:
+        st.markdown("#### Research Communication")
+        st.write(
+            "Scientific writing, conference presentations, interdisciplinary "
+            "collaboration, and technical communication."
+        )
 
+    st.markdown("#### Selected Publications & Presentations")
 
-publications = [
-    (
-        "Transcriptomic Predictors of Therapy Response Across Age Groups "
-        "in an Omani Breast Cancer Cohort",
-        "AACR 2025 abstract accepted. Co-first author; responsible for the "
-        "data analysis and machine learning work."
-    ),
-    (
-        "A Multi-Agent Open-Source LLM for Cancer Registry Information "
-        "Extraction from Pathology & Medical Reports",
-        "BioNLP 2026, accepted. Co-author and technical contributor."
-    ),
-    (
-        "Comparative Evaluation of Dimensionality Reduction Strategies "
-        "for Clustering-Based Patient Stratification in Breast Cancer "
-        "Transcriptomics",
-        "IWBBIO 2026, accepted and presented. Co-author and conference presenter."
-    ),
-    (
-        "Automated Extraction of Multi-Field and Multi-Site Cancer Registry "
-        "Information Using Open-Source Large Language Models",
-        "Manuscript under revision for submission to JMIR Medical Informatics. "
-        "Second author and technical contributor."
-    ),
-    (
-        "Disentangling Architectural and Graph Effects in Multi-Omics "
-        "Autoencoders: A Controlled Ablation and Null-Graph Study in "
-        "Breast Cancer",
-        "MSc thesis-based manuscript submitted to Springer Nature's NetMAHIB."
-    ),
-]
+    publications = [
+        (
+            "Transcriptomic Predictors of Therapy Response Across Age Groups "
+            "in an Omani Breast Cancer Cohort",
+            "AACR 2025 abstract accepted. Co-first author; responsible for "
+            "the data analysis and machine learning work."
+        ),
+        (
+            "A Multi-Agent Open-Source LLM for Cancer Registry Information "
+            "Extraction from Pathology & Medical Reports",
+            "BioNLP 2026, accepted. Co-author and technical contributor."
+        ),
+        (
+            "Comparative Evaluation of Dimensionality Reduction Strategies "
+            "for Clustering-Based Patient Stratification in Breast Cancer "
+            "Transcriptomics",
+            "IWBBIO 2026, accepted and presented. Co-author and conference presenter."
+        ),
+        (
+            "Automated Extraction of Multi-Field and Multi-Site Cancer "
+            "Registry Information Using Open-Source Large Language Models",
+            "Manuscript under revision for submission to JMIR Medical Informatics. "
+            "Second author and technical contributor."
+        ),
+        (
+            "Disentangling Architectural and Graph Effects in Multi-Omics "
+            "Autoencoders: A Controlled Ablation and Null-Graph Study in "
+            "Breast Cancer",
+            "MSc thesis-based manuscript submitted to Springer Nature's NetMAHIB."
+        ),
+    ]
 
-for title, description in publications:
-    st.markdown(f"**{title}**")
-    st.write(description)
+    for title, description in publications:
+        st.markdown(f"**{title}**")
+        st.write(description)
 
+    st.divider()
 
-st.divider()
+    # -----------------------------------------------------
+    # Professional Experience
+    # -----------------------------------------------------
 
+    st.markdown("### Professional Experience")
 
-# ============================================================
-# PROFESSIONAL EXPERIENCE
-# ============================================================
+    st.markdown("#### Teaching & Education")
 
-st.markdown("### Professional Experience")
-
-
-st.markdown("#### Teaching & Education")
-
-st.markdown(
-    """
-**Teaching Assistant — Sultan Qaboos University**  
+    st.markdown(
+        """**Teaching Assistant — Sultan Qaboos University**  
 *Feb 2025–May 2026*
 
 Supported undergraduate teaching across Deep Learning Fundamentals,
 Machine Learning, and Introduction to Python Programming, with approximately
 30–35 students per course.
 """
-)
+    )
 
-st.markdown(
-    """
-**Programming Instructor — Eveil@ng, Online Academy**  
+    st.markdown(
+        """**Programming Instructor — Eveil@ng, Online Academy**  
 *Jan 2024–Jun 2025; Jan 2025–Jun 2026*
 
 Delivered approximately six-month courses in Web Programming and Python
 Programming and prepared practical programming material for learners with
 different levels of prior experience.
 """
-)
+    )
 
-st.markdown(
-    """
-**Arabic Teacher — Local Cultural Center, Sartrouville, France**  
+    st.markdown(
+        """**Arabic Teacher — Local Cultural Center, Sartrouville, France**  
 *2021–2024*
 
 Taught Arabic to school-age and adult learners across multiple academic years,
 adapting explanations and activities to different learner levels.
 """
-)
+    )
 
-st.markdown(
-    """
-**Language Teacher — Academia Europa, Online Academy**  
+    st.markdown(
+        """**Language Teacher — Academia Europa, Online Academy**  
 *Dec 2021–Mar 2022*
 
 Taught English and French online to learners with varied levels and learning goals.
 """
-)
+    )
 
-st.markdown(
-    """
-**Python Tutor — Superprofs.com**  
+    st.markdown(
+        """**Python Tutor — Superprofs.com**  
 *Summer 2025*
 
-Provided one-to-one Python programming tutoring tailored to individual
-learning needs.
+Provided one-to-one Python programming tutoring tailored to individual learning needs.
 """
-)
+    )
 
+    st.markdown("#### Research & Data Science")
 
-st.markdown("#### Research & Data Science")
-
-st.markdown(
-    """
-**Research Assistant – Medical AI & NLP — Sultan Qaboos University**  
+    st.markdown(
+        """**Research Assistant – Medical AI & NLP — Sultan Qaboos University**  
 *Feb–Dec 2025*
 
 Developed automated cancer-registry information extraction workflows from
-pathology and medical reports using open-source LLMs, including LLaMA-,
-Qwen-, and DeepSeek-based models. Designed multi-agent workflows and worked
-with hospital databases covering more than 600 patients.
+pathology and medical reports using open-source LLMs, including LLaMA-, Qwen-,
+and DeepSeek-based models. Designed multi-agent workflows and worked with
+hospital databases covering more than 600 patients.
 """
-)
+    )
 
-st.markdown(
-    """
-**MSc Researcher – Biomedical Machine Learning — Sultan Qaboos University**  
+    st.markdown(
+        """**MSc Researcher – Biomedical Machine Learning — Sultan Qaboos University**  
 *2024–2026*
 
 Developed controlled deep learning experiments to study structural inductive
@@ -356,46 +369,14 @@ bias in unsupervised representations of high-dimensional breast cancer
 multi-omics data, evaluating autoencoder, denoising, graph-regularized,
 and graph-structured approaches.
 """
-)
-
-
-st.divider()
-
-
-# ============================================================
-# TEACHING AREAS
-# ============================================================
-
-st.markdown("### Teaching Areas")
-
-teaching_col1, teaching_col2 = st.columns(2)
-
-with teaching_col1:
-    st.markdown("**Programming**")
-    st.write("Python · Web Programming")
-
-    st.markdown("**AI & Data**")
-    st.write(
-        "Machine Learning · Deep Learning · Data Science · Data Visualization"
-    )
-
-with teaching_col2:
-    st.markdown("**Languages**")
-    st.write("Arabic · English · French")
-
-    st.markdown("**Research & Academic**")
-    st.write(
-        "Academic writing · Literature review · Experimental design · "
-        "Applied statistical analysis · Scientific presentations · LaTeX/Overleaf"
     )
 
 
-st.divider()
-
-
-# ============================================================
+# =========================================================
 # PROFESSIONAL LINKS
-# ============================================================
+# =========================================================
+
+st.divider()
 
 st.markdown("### Professional Links")
 
